@@ -1,0 +1,109 @@
+.awrapper {
+    position: relative;
+    width: 100%;
+    padding: 80px 20px;
+    background-image: url('images/campus.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Overlay to improve text readability */
+  .awrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
+.container_wrap {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .box {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .box h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+  
+  /* Animation for Boxes */
+  .box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .box.scroll-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .box {
+      min-width: 200px;
+      max-width: 100%;
+    }
+  
+    .box h1 {
+      font-size: 2rem;
+    }
+  
+    .box h3 {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .awrapper {
+      padding: 50px 10px;
+    }
+  
+    .box {
+      padding: 20px;
+    }
+  
+    .box h1 {
+      font-size: 1.8rem;
+    }
+  
+    .box h3 {
+      font-size: 0.9rem;
+    }
+  }

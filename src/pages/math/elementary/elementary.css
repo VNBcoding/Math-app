@@ -1,0 +1,349 @@
+.elementary-container {
+    background-color: var(--secondary-bg) !important;
+    width: 100%;
+    
+   
+    margin-bottom: 30px;
+    padding: 1rem;
+    text-align: center;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.elementary-title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Topics Grid */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+    gap: 2rem; /* Reduced gap for smaller screens */
+    padding: 0rem; /* Reduced padding for smaller screens */
+}
+
+/* Topic Card Styles */
+.topic-card {
+
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: white;
+    background: var(--primary-color); /* Fallback background color */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styles with Smaller Size */
+.topic-image {
+    width: 80%; /* Adjust the width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80%; /* Ensure the image doesn't overflow vertically */
+    display: block;
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    object-fit: contain; /* Ensure the image fits within the container without cropping */
+    animation: slideInFromSide 1.5s ease-in-out; /* Apply animation */
+}
+
+/* Keyframes for Slide-In Animation */
+@keyframes slideInFromSide {
+    0% {
+        transform: translateX(-100%); /* Start from the left side */
+    }
+    100% {
+        transform: translateX(0); /* Move to the center */
+    }
+}
+
+/* Overlay Styles */
+.topic-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    padding: 15px;
+    text-align: left;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+}
+
+.topic-overlay h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.topic-overlay p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topics-grid {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+
+    .elementary-title {
+        font-size: 1.8rem; /* Further reduced font size for smaller screens */
+    }
+
+    .topic-card {
+        padding: 1rem; /* Further reduced padding for smaller screens */
+    }
+
+    .topic-card h2 {
+        font-size: 1.3rem; /* Further reduced font size for smaller screens */
+    }
+
+    .topic-card p {
+        font-size: 0.9rem; /* Further reduced font size for smaller screens */
+    }
+
+    .topic-image {
+        width: 90%; /* Slightly larger image on smaller screens */
+        max-height: 90%; /* Adjust height for smaller screens */
+    }
+}
+
+/* General Styles */
+.addsub-container {
+    display: flex;
+    flex-direction: row; /* Side-by-side layout for larger screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+/* Grade Selector on the Left */
+.grade-selector {
+    width: 250px; /* Fixed width for the grade selector */
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Sticky position for scrolling */
+    top: 1rem; /* Stick to the top */
+    height: fit-content; /* Adjust height to content */
+}
+
+.grade-selector h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.grade-list {
+    list-style: none;
+    padding: 0;
+}
+
+.grade-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.grade-item:hover {
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    transform: translateX(5px);
+}
+
+.grade-item.active {
+    background: var(--primary-color);
+    color: black;
+    font-weight: bold;
+}
+
+/* Content Container */
+.content-container {
+    flex: 1; /* Take remaining space */
+    background: var(--contrast-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs (Lecture and Quiz Buttons) */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center; /* Center the buttons */
+}
+
+.tabs button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabs button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.tabs button.active {
+    background: #2980b9;
+    font-weight: bold;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lecture and Quiz Content */
+.lecture h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2980b9; 
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.lecture-content, .quiz {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lecture-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.video-container {
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    z-index: 1;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+}
+
+.quiz-question input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.quiz-question input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+/* Submit Button with Border */
+.quiz-submit-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: var(--primary-color); /* Use your theme's primary color */
+    color: white;
+    border: 2px solid var(--primary-color); /* Add a border */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 2rem auto; /* Center the button */
+  }
+  
+  .quiz-submit-button:hover {
+    background: #2980b9; /* Darker shade for hover */
+    border-color: #2980b9; /* Match border color with background */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .quiz-submit-button:active {
+    transform: translateY(0); /* Reset on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Quiz Results Container */
+  .feedback {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--secondary-bg);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure it doesn't overflow */
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    word-break: break-word; /* Break words if necessary */
+  }
+  
+  .feedback h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .feedback pre {
+    white-space: pre-wrap; /* Preserve formatting but wrap text */
+    font-family: inherit; /* Use the same font as the rest of the app */
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .addsub-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .grade-selector {
+        width: 100%; /* Full width on smaller screens */
+        position: static; /* Remove sticky behavior */
+    }
+
+    .tabs button {
+        padding: 0.5rem 1rem; /* Smaller buttons on smaller screens */
+        font-size: 0.9rem;
+    }
+}

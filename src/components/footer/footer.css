@@ -1,0 +1,136 @@
+
+footer {
+  background-color: #1a1a1a; 
+  color: #ffffff; 
+  padding: 2rem 0; 
+  margin-top: auto; 
+}
+
+footer a {
+  color: #ffffff; /* White links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+footer a:hover {
+  color: #1eb2a6; /* Teal color on hover */
+}
+
+/* Container for footer content */
+.container {
+  max-width: 1200px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the container */
+  padding: 0 1rem; /* Add padding on smaller screens */
+}
+
+/* Grid layout for footer sections */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Spacing between columns */
+}
+
+/* Logo & Info Section */
+footer .logo-section img {
+  height: 80px; /* Logo size */
+  margin-bottom: 1rem; /* Spacing below logo */
+}
+
+footer .logo-section h1 {
+  font-size: 1.5rem; /* Larger font size for heading */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 0.5rem; /* Spacing below heading */
+}
+
+footer .logo-section span {
+  font-size: 0.875rem; /* Smaller font size for subtitle */
+  color: #9ca3af; /* Light gray text */
+}
+
+footer .logo-section p {
+  font-size: 0.875rem; /* Smaller font size for description */
+  color: #9ca3af; /* Light gray text */
+  margin-top: 1rem; /* Spacing above paragraph */
+  margin-left: 2px;
+}
+footer h1 {
+    font-size: 1.25rem; /* Larger font size for section headings */
+    font-weight: 600; /* Semi-bold text */
+    margin-bottom: 1rem; /* Spacing below heading */
+}
+/* Explore Links & Quick Links Sections */
+footer h3 {
+  font-size: 1.25rem; /* Larger font size for section headings */
+  font-weight: 600; /* Semi-bold text */
+  margin-bottom: 1rem; /* Spacing below heading */
+}
+
+footer ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+footer ul li {
+  margin-bottom: 0.75rem; /* Spacing between list items */
+}
+
+footer ul li a {
+  font-size: 0.875rem; /* Smaller font size for links */
+  color: #9ca3af; /* Light gray text */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+footer ul li a:hover {
+  color: #1eb2a6; /* Teal color on hover */
+}
+
+/* Contact Information Section */
+footer .contact-info ul li {
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 1rem; /* Spacing between items */
+}
+
+footer .contact-info ul li i {
+  margin-right: 0.5rem; /* Spacing between icon and text */
+  color: #1eb2a6; /* Teal color for icons */
+}
+
+footer .contact-info ul li a {
+  color: #9ca3af; /* Light gray text */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+footer .contact-info ul li a:hover {
+  color: #1eb2a6; /* Teal color on hover */
+}
+
+/* Social Media & Legal Notice Section */
+footer .social-legal {
+  border-top: 1px solid #374151; /* Divider line */
+  padding-top: 1.5rem; /* Spacing above content */
+  margin-top: 2rem; /* Spacing above section */
+  text-align: center; /* Center text */
+}
+
+footer .social-legal .social-icons {
+  display: flex; /* Align icons horizontally */
+  justify-content: center; /* Center icons */
+  gap: 1rem; /* Spacing between icons */
+  margin-bottom: 1rem; /* Spacing below icons */
+}
+
+footer .social-legal .social-icons a {
+  font-size: 1.25rem; /* Larger font size for icons */
+  color: #9ca3af; /* Light gray text */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+footer .social-legal .social-icons a:hover {
+  color: #1eb2a6; /* Teal color on hover */
+}
+
+footer .social-legal p {
+  font-size: 0.875rem; /* Smaller font size for legal text */
+  color: #9ca3af; /* Light gray text */
+}

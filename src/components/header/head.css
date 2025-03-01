@@ -1,0 +1,66 @@
+/*--------head------------*/
+.head {
+    padding: 20px 0;
+    color: rgb(205, 28, 28);
+}
+
+.img {
+    margin-right: 10px;
+}
+  
+.logo h1 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.head .icon {
+    margin-left: 15px;
+}
+/* Ensure all icons (social + toggle) are aligned in the same row */
+.social, .toggle {
+    display: flex;
+    align-items: center;
+
+}
+
+/*--------head------------*/
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Start section - adjust for smaller screens */
+    .start {
+        clip-path: none; /* Remove clip-path for mobile */
+    }
+
+    /* Hide the navigation menu (favicons) */
+    .social {
+        display: none; /* Hide favicons */
+    }
+    /* Show the toggle button for mobile navigation */
+    .sr-only {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        color: white;
+        font-size: 20px; /* Smaller size for smaller screens */
+        position: absolute;
+        right: 10px; /* Adjust right margin */
+        top: 10px; /* Adjust top margin */
+    }
+
+    /* Mobile navigation menu */
+    .mobile-nav {
+        position: absolute;
+        top: 7vh;
+        left: 0;
+        width: 100%;
+        background-color: #1eb2a6;
+        display: none; /* Initially hidden */
+    }
+
+    /* Show mobile navigation when toggle is clicked */
+    .mobile-nav.active {
+        display: block; /* Show mobile menu */
+    }
+}

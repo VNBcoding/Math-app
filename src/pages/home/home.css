@@ -1,0 +1,241 @@
+.home {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2; /* Ensure it's above the video */
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-family: 'Rouge Script', cursive;
+  font-weight: bold;
+  background: linear-gradient(to right, #d30718, #FFC371);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateZ(-500px);
+  animation: textAppear 7s ease-out forwards;
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateZ(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+/* Video Background */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* About Section */
+.about-section,
+.ai-learning-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 4s forwards;
+  animation-delay: 1s;
+}
+
+.about-content,
+.ai-learning-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image,
+.ai-image {
+  flex: 1;
+  max-width: 55%;
+  opacity: 0;
+  animation: zoomIn 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.about-image img,
+.ai-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-text,
+.ai-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.about-text h2,
+.ai-text h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text p,
+.ai-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0;
+  animation: slideInLeft 1s forwards;
+  animation-delay: 1s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Initial state (hidden) */
+.scroll-target {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Animated state (visible) */
+.scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll Animation */
+
+.scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .about-content,
+  .ai-learning-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-image,
+  .ai-image {
+    max-width: 80%;
+    order: 2; 
+  }
+
+  .about-text,
+  .ai-text {
+    max-width: 80%;
+    text-align: center;
+    order: 1;
+  }
+
+  .about-text p,
+  .ai-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-image,
+  .ai-image {
+    max-width: 90%;
+    order: 2; 
+  }
+
+  .about-text,
+  .ai-text {
+    max-width: 90%;
+    order: 1;
+  }
+
+  .about-text p,
+  .ai-text p {
+    font-size: 0.9rem;
+  }
+}

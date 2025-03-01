@@ -1,0 +1,208 @@
+header {
+  background-color: #18d0bbb6; 
+  padding: 0.8rem 2rem; 
+  box-shadow: 0 4px 10px rgba(247, 13, 13, 0.1);
+  position: relative;
+  margin-bottom: 0px;
+}
+
+/* Flex container for navigation */
+nav {
+  display: flex;
+  justify-content: space-between; /* Keep menu button on the right */
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  position: relative;
+}
+
+/* Center the navigation links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centers it exactly */
+}
+
+/* Mobile view: Hide nav links by default */
+.nav-links {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+/* Mobile menu visibility: when active, display block */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #18d0bbb6;
+  width: 100%;
+  height: 100vh;
+  padding-top: 4rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Style for list items */
+.nav-links li {
+  margin: 0;
+  text-align: center;
+}
+
+/* Adjust nav links on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    padding: 1.5rem;
+  }
+
+  /* Show menu button */
+  .toggle {
+    display: block;
+  }
+}
+
+
+/* Mobile menu visibility: when active, display block */
+.nav-links.active {
+  display: flex; /* Ensure links are visible */
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #18d0bbb6;
+  width: 100%;
+  height: 100vh;
+  padding-top: 4rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Center list items */
+.nav-links li {
+  margin: 0;
+  text-align: center;
+}
+
+/* Adjust nav links on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    padding: 1.5rem;
+  }
+}
+/* Mobile menu visibility: when active, display block */
+.nav-links.active {
+  display: block; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #18d0bbb6;
+  width: 100%;
+  height: 100vh;
+  padding-top: 4rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling for navigation list items */
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: rgb(173, 182, 231); /* Keep text white on hover for consistency */
+}
+
+/* Hamburger toggle button */
+.toggle {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: --primary-color;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-bottom:2rem;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff; 
+  display: none; 
+}
+
+/* Show close button when menu is active */
+.nav-links.active .close-btn {
+  display: block;
+}
+
+/* Hover effect for the toggle button */
+.toggle:hover {
+  color: black; 
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Mobile menu links styling */
+  .nav-links li {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  /* Hide hamburger button when menu is open */
+  .toggle {
+    display: block;
+  }
+
+  /* Show the nav links only when active */
+  .nav-links.active {
+    display: block;
+  }
+}

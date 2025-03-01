@@ -1,0 +1,100 @@
+/* Base Styles */
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333; /* Light theme text color */
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 15px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .countdown-item {
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+  }
+  
+  .countdown-item span {
+    display: block;
+  }
+  
+  .countdown-item span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .countdown-item span:last-child {
+    font-size: 1rem;
+    color: #666; /* Darker text for subtext */
+  }
+  
+  /* Newsletter Form Styles */
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .email-input {
+    padding: 10px;
+    border: 2px solid #61dafb;
+    border-radius: 5px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    color: #333; /* Light theme text color */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  
+  .email-input::placeholder {
+    color: #999; /* Light placeholder text */
+  }
+  
+  .email-input:focus {
+    border-color: #4fa3c7;
+    background: rgba(255, 255, 255, 1); /* Fully white background on focus */
+    outline: none;
+  }
+  
+  .notify-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: #282c34;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notify-button:hover {
+    background-color: #4fa3c7;
+  }
