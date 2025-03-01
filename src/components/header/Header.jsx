@@ -44,9 +44,9 @@ const Header = ({ toggleTheme, theme }) => {
             onClick={handleToggleMenu}
           >
             {click ? (
-              <i className="fa fa-times" aria-hidden="true"></i> // Close icon
+              <i className="fa fa-times" aria-hidden="true"></i>
             ) : (
-              <i className="fa fa-bars" aria-hidden="true"></i> // Hamburger menu icon
+              <i className="fa fa-bars" aria-hidden="true"></i> 
             )}
           </button>
         </nav>

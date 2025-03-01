@@ -16,14 +16,14 @@
 .head .icon {
     margin-left: 15px;
 }
-/* Ensure all icons (social + toggle) are aligned in the same row */
+
 .social, .toggle {
     display: flex;
     align-items: center;
 
 }
 
-/*--------head------------*/
+
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
@@ -34,7 +34,7 @@
 
     /* Hide the navigation menu (favicons) */
     .social {
-        display: none; /* Hide favicons */
+        display: none;
     }
     /* Show the toggle button for mobile navigation */
     .sr-only {
@@ -43,10 +43,10 @@
         justify-content: center;
         background: none;
         color: white;
-        font-size: 20px; /* Smaller size for smaller screens */
+        font-size: 20px;
         position: absolute;
-        right: 10px; /* Adjust right margin */
-        top: 10px; /* Adjust top margin */
+        right: 10px;
+        top: 10px; 
     }
 
     /* Mobile navigation menu */
@@ -56,11 +56,11 @@
         left: 0;
         width: 100%;
         background-color: #1eb2a6;
-        display: none; /* Initially hidden */
+        display: none; 
     }
 
     /* Show mobile navigation when toggle is clicked */
     .mobile-nav.active {
-        display: block; /* Show mobile menu */
+        display: block; 
     }
 }

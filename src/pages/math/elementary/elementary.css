@@ -294,13 +294,13 @@
   }
   
   .quiz-submit-button:hover {
-    background: #2980b9; /* Darker shade for hover */
-    border-color: #2980b9; /* Match border color with background */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background: #2980b9; 
+    border-color: #2980b9; 
+    transform: translateY(-2px); 
   }
   
   .quiz-submit-button:active {
-    transform: translateY(0); /* Reset on click */
+    transform: translateY(0); 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -313,9 +313,9 @@
     border-radius: 10px;
     color: var(--text-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 100%; /* Ensure it doesn't overflow */
-    overflow-wrap: break-word; /* Break long words to prevent overflow */
-    word-break: break-word; /* Break words if necessary */
+    max-width: 100%; 
+    overflow-wrap: break-word; 
+    word-break: break-word; 
   }
   
   .feedback h3 {
@@ -325,8 +325,8 @@
   }
   
   .feedback pre {
-    white-space: pre-wrap; /* Preserve formatting but wrap text */
-    font-family: inherit; /* Use the same font as the rest of the app */
+    white-space: pre-wrap; 
+    font-family: inherit; 
     font-size: 1rem;
     line-height: 1.5;
     margin: 0;
@@ -334,16 +334,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .addsub-container {
-        flex-direction: column; /* Stack vertically on smaller screens */
+        flex-direction: column; 
     }
 
     .grade-selector {
-        width: 100%; /* Full width on smaller screens */
-        position: static; /* Remove sticky behavior */
+        width: 100%;
+        position: static;
     }
 
     .tabs button {
-        padding: 0.5rem 1rem; /* Smaller buttons on smaller screens */
+        padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
 }

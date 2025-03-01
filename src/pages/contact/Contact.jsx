@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './contact.css'; // Import the CSS file
+import './contact.css'; 
 
 const ContactPage = () => {
   const [email, setEmail] = useState('');

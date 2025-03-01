@@ -5,17 +5,15 @@ header {
   position: relative;
   margin-bottom: 0px;
 }
-
 /* Flex container for navigation */
 nav {
   display: flex;
-  justify-content: space-between; /* Keep menu button on the right */
+  justify-content: space-between; 
   align-items: center;
   width: 100%;
   height: 3rem;
   position: relative;
 }
-
 /* Center the navigation links */
 .nav-links {
   display: flex;
@@ -25,24 +23,20 @@ nav {
   padding: 0;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centers it exactly */
+  transform: translateX(-50%); 
 }
-
 /* Mobile view: Hide nav links by default */
 .nav-links {
   display: none;
 }
-
 @media (min-width: 769px) {
   .nav-links {
     display: flex;
   }
-
   .toggle {
     display: none;
   }
 }
-
 /* Mobile menu visibility: when active, display block */
 .nav-links.active {
   display: flex;
@@ -60,13 +54,10 @@ nav {
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
 }
-
-/* Style for list items */
 .nav-links li {
   margin: 0;
   text-align: center;
 }
-
 /* Adjust nav links on mobile */
 @media (max-width: 768px) {
   .nav-links {
@@ -83,11 +74,9 @@ nav {
     display: block;
   }
 }
-
-
 /* Mobile menu visibility: when active, display block */
 .nav-links.active {
-  display: flex; /* Ensure links are visible */
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 0;
@@ -108,7 +97,6 @@ nav {
   margin: 0;
   text-align: center;
 }
-
 /* Adjust nav links on mobile */
 @media (max-width: 768px) {
   .nav-links {
@@ -136,12 +124,10 @@ nav {
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
 }
-
 /* Styling for navigation list items */
 .nav-links li {
   margin: 0;
 }
-
 .nav-links li a {
   text-decoration: none;
   color: black;
@@ -149,11 +135,9 @@ nav {
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .nav-links li a:hover {
-  color: rgb(173, 182, 231); /* Keep text white on hover for consistency */
+  color: rgb(173, 182, 231);
 }
-
 /* Hamburger toggle button */
 .toggle {
   border: none;
@@ -166,8 +150,6 @@ nav {
   transition: color 0.3s ease;
   margin-bottom:2rem;
 }
-
-/* Close button styling */
 .close-btn {
   position: absolute;
   top: 1rem;
@@ -177,17 +159,14 @@ nav {
   color: #fff; 
   display: none; 
 }
-
 /* Show close button when menu is active */
 .nav-links.active .close-btn {
   display: block;
 }
-
 /* Hover effect for the toggle button */
 .toggle:hover {
   color: black; 
 }
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   /* Mobile menu links styling */
@@ -195,13 +174,9 @@ nav {
     padding: 1.5rem;
     text-align: center;
   }
-
-  /* Hide hamburger button when menu is open */
   .toggle {
     display: block;
   }
-
-  /* Show the nav links only when active */
   .nav-links.active {
     display: block;
   }

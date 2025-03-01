@@ -15,7 +15,7 @@
   .content {
     max-width: 600px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.8); 
     border-radius: 15px;
   }
   
@@ -36,7 +36,7 @@
   }
   
   .countdown-item {
-    background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
+    background: rgba(0, 0, 0, 0.1); 
     padding: 20px;
     border-radius: 10px;
     width: 100px;
@@ -68,14 +68,14 @@
     border: 2px solid #61dafb;
     border-radius: 5px;
     width: 250px;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    color: #333; /* Light theme text color */
+    background: rgba(255, 255, 255, 0.9); 
+    color: #333;
     font-size: 1rem;
     transition: border-color 0.3s ease, background 0.3s ease;
   }
   
   .email-input::placeholder {
-    color: #999; /* Light placeholder text */
+    color: #999; 
   }
   
   .email-input:focus {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./ComingSoon.css"; // Add your CSS for styling
+import "./ComingSoon.css"; 
 
 // Import the light background image
 import lightBackground from "/icon/comingsoon1.png";
