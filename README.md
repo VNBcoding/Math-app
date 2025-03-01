@@ -36,13 +36,13 @@ Ensure you have the following installed on your machine:
 ## Setup Instructions
 Follow the steps below to run the project locally:
 
-1. Clone the Repository
-git clone https://github.com/VNBcoding/Math-app.git
-cd Math-app
-2.Install Dependencies
-npm install
-3.Run the Development Server
-This will start the app at http://localhost:5173/ by default
+### 1. Clone the Repository
+- **git clone https://github.com/VNBcoding/Math-app.git
+- **cd Math-app
+### 2. Install Dependencies
+- **npm install
+### 3.Run the Development Server
+- **This will start the app at http://localhost:5173/ by default
 
 ## Challenges Faced and How They Were Addressed 🚧
 
