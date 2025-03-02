@@ -9,7 +9,7 @@ const Footer = () => {
           
           {/* Logo & Info */}
           <div id="footer-logo-section" className="space-y-4" style={{marginLeft: '0px', paddingLeft: '0px'}}>
-            <img src="/icon/Logo.png" alt="Cambridge International Academy" className="h-16"/>
+            <img src="public/icon/Logo.png" alt="Cambridge International Academy" className="h-16"/>
             <h1 className="text-lg font-bold">CAMBRIDGE INTERNATIONAL ACADEMY</h1>
             <span className="text-sm text-gray-400">QUALITY EDUCATION & LEARNING</span>
             <p className="text-gray-300 text-sm">
